@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}
+    Flow Control Page
+{% endblock %}
+{% block content %}
+    {% for comment in comments %}
+        <p>This is {{comment}}</p>
+    {% endfor %}
+{% endblock %}
