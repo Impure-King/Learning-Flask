@@ -4,6 +4,10 @@ from flask_bootstrap import Bootstrap
 app = Flask(__name__)
 
 @app.route('/')
+def start():
+    return render_template("start.html")
+
+@app.route('/home')
 def home():
     return render_template("home.html")
 
@@ -22,7 +26,7 @@ def control():
     return render_template('control.html', comments = map)
 
 bootstrap = Bootstrap(app)
-@app.route('/strap/<name>')
+@app.route('/users/<name>')
 def greet(name):
     return render_template("strap.html", name = name)
 
